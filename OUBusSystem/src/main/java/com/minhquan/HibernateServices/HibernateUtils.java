@@ -34,7 +34,7 @@ public class HibernateUtils {
         prop.put(Environment.DRIVER,"com.mysql.cj.jdbc.Driver");
         prop.put(Environment.URL, "jdbc:mysql://localhost:3306/bussystem");
         prop.put(Environment.USER,"root");
-        prop.put(Environment.PASS, "An1851010010");
+        prop.put(Environment.PASS, "minhquan2212");
         
         conf.setProperties(prop);
         conf.addAnnotatedClass(LoaiXe.class);

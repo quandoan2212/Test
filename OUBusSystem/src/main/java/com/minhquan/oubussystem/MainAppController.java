@@ -2,11 +2,13 @@ package com.minhquan.oubussystem;
 
 import com.minhquan.HibernateServices.LoaiXeServices;
 import com.minhquan.HibernateServices.TuyenDuongServices;
+import com.minhquan.HibernateServices.XeKhachServices;
 import com.minhquan.pojo.LoaiXe;
 import com.minhquan.pojo.TuyenDuong;
 import com.minhquan.pojo.XeKhach;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -294,9 +296,10 @@ public class MainAppController implements Initializable{
        this.cbXe.prefHeightProperty().bind(this.vbDatVe.widthProperty());
        this.txtSoGhe.prefWidthProperty().bind(this.vbDatVe.widthProperty());
        
-       this.cbLoaiXe.getItems().addAll(LoaiXeServices.getLoaiXe());
-       this.cbNoiDi.getItems().addAll(TuyenDuongServices.getTuyenDuong());
-      
+       //this.cbLoaiXe.getItems().addAll(LoaiXeServices.getLoaiXe());
+      /* List<TuyenDuong> l = TuyenDuongServices.getTuyenDuong();
+       this.cbNoiDi.getItems().addAll(l);*/
+      this.cbXe.getItems().addAll(XeKhachServices.getXeKhach("22"));
     }
     
     public void bookTicket(ActionEvent e){

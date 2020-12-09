@@ -5,6 +5,7 @@
  */
 package com.minhquan.pojo;
 
+import java.io.Serializable;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,8 +19,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "loaixe")
-public class LoaiXe {
-     @Id
+public class LoaiXe  implements Serializable{
+    @Id
     @Column(name = "MaLoaiXe")
     private String maLoaiXe;
     

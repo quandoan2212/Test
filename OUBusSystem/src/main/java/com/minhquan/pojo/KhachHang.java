@@ -34,6 +34,12 @@ public class KhachHang implements Serializable{
     @OneToMany(mappedBy = "khachHang")
     private Set<Ticket> ticket;
 
+    @Override
+    public String toString() {
+        return this.tenKH; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
     /**
      * @return the id
      */

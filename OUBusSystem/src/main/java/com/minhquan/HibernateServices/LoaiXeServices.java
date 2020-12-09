@@ -26,7 +26,7 @@ public class LoaiXeServices {
     
     public static List<LoaiXe> getLoaiXe(){
         try(Session session = HibernateUtils.getSession().openSession()){
-            Query<LoaiXe> query = session.createQuery("SELECT * FROM LoaiXe ");
+            Query<LoaiXe> query = session.createQuery("FROM LoaiXe");
             List<LoaiXe> list = query.list();
             return list;
         }

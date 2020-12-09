@@ -5,7 +5,9 @@
  */
 package com.minhquan.oubussystem;
 
+import com.minhquan.HibernateServices.KhachHangServices;
 import com.minhquan.HibernateServices.LoaiXeServices;
+import com.minhquan.pojo.KhachHang;
 import com.minhquan.pojo.LoaiXe;
 //import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +22,7 @@ public class Demo {
         List<LoaiXe> list = LoaiXeServices.getLoaiXe();
         
          list.forEach((s) -> {
-             System.out.println(s);
+             System.out.println(s.toString());
          }); 
     }
 }
